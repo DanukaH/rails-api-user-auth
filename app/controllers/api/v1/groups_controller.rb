@@ -1,6 +1,6 @@
 class Api::V1::GroupsController < ApplicationController
   before_action :set_group, only: %i[ show update destroy ]
-  prepend_before_action :authenticate_scope!
+  load_and_authorize_resource
 
   # GET /groups
   def index

@@ -175,6 +175,7 @@ DEPENDENCIES
   bootsnap
   cancancan
   debug
+  devise
   devise_token_auth
   mysql2 (~> 0.5)
   puma (~> 5.0)
