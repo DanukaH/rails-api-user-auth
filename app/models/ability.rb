@@ -7,6 +7,9 @@ class Ability
     if user.admin?
       # Admin user abilities
       can :manage, :Group
+      can :manage, :User
+    else
+      can :manage, :User, user_id: user.id
     end
   end
 end
