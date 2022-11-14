@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::API
+class Api::V1::ApplicationController < ActionController::API
   before_action :configure_permitted_parameters, if: :devise_controller?
   include DeviseTokenAuth::Concerns::SetUserByToken
 

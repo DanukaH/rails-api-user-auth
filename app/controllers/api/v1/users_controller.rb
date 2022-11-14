@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: %i[ show update destroy ]
-  authorize_resource
+  prepend_before_action :authenticate_scope!
 
   # GET /users
   def index
